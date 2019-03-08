@@ -71,6 +71,20 @@ class MarioFrenzy(arcade.Window):
                     wall = arcade.Sprite("sprites/block5050.png", SPRITE_SCALING)
                 elif item == 3:
                     wall = arcade.Sprite("sprites/ItemBlock5050.png", SPRITE_SCALING)
+                elif item == 4:
+                    wall = arcade.Sprite("sprites/Tube5050.png", SPRITE_SCALING)
+                elif item == 5:
+                    wall = arcade.Sprite("sprites/TubeTopLeft5050.png", SPRITE_SCALING)
+                elif item == 6:
+                    wall = arcade.Sprite("sprites/Hole5050.png", SPRITE_SCALING)
+                elif item == 7:
+                    wall = arcade.Sprite("sprites/stair5050.png", SPRITE_SCALING)
+                elif item == 8:
+                    wall = arcade.Sprite("sprites/FlagPole5050.png", SPRITE_SCALING)
+                elif item == 9:
+                    wall = arcade.Sprite("sprites/Flag5050.png", SPRITE_SCALING)
+                elif item == 10:
+                    wall = arcade.Sprite("sprites/Castle5050.png", SPRITE_SCALING)
 
                 wall.right = column_index*64
                 wall.top = (row_index) * 64
