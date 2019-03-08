@@ -20,6 +20,16 @@ def join_game(username, x, y, db):
     db.commit()
     print(cursor.rowcount, username + "'s record has been updated")
 
+def update_location(username, x, y, db):
+    lobby = sqlite3.connect(db)
+    cursor = lobby.cursor()
+    update_x = "UPDATE game SET location_x = " + x + " WHERE username = " + username
+    update_y = "UPDATE game SET location_y = " + y + " WHERE username = " + username
+    mycursor.execute(update_x, update_y)
+    db.commit()
+    print(mycursor.rowcount, " location(s) updated")
+
+
 
 
 def create_table(conn, create_table_sql):
