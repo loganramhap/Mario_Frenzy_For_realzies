@@ -213,7 +213,6 @@ class MyGame(arcade.Window):
                                 self.view_bottom,
                                 SCREEN_HEIGHT + self.view_bottom)
 
-
 def main():
     window = MyGame()
     window.setup()
