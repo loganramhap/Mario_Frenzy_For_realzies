@@ -1,5 +1,0 @@
-language: haxe
-haxe:
-  - stable
-hxml:
-  - test.hxml

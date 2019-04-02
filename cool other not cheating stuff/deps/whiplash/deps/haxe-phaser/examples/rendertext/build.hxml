@@ -1,4 +1,0 @@
--cp .
--cp ../../src
--js rendertext.js
--main RenderText
