@@ -90,6 +90,7 @@ function create() {
   game.camera.follow(player);
 
   cursors = game.input.keyboard.createCursorKeys();
+  testCases();
 }
 
 function update() {
@@ -128,6 +129,7 @@ function update() {
 
 function coinOverlap(player, coin) {
   coin.kill();
+  return "coin_removed"
 }
 
 function goombaOverlap(player, goomba) {
@@ -139,6 +141,7 @@ function goombaOverlap(player, goomba) {
     game.time.events.add(Phaser.Timer.SECOND, function() {
       goomba.kill();
     });
+    return true;
   } else {
     player.frame = 6;
     player.body.enable = false;
@@ -146,5 +149,15 @@ function goombaOverlap(player, goomba) {
     game.time.events.add(Phaser.Timer.SECOND * 3, function() {
       game.paused = true;
     });
+    return false;
   }
+}
+
+function testCases(){
+  expect(goombaOverlap(player, goomba)).to.be(true);
+  expect(coinOverlap(player, coin)).to.be("coin_removed");
+  cursors.right.isDown = true;
+  expect(player.velocity.x).to.be(90);
+  cursors.right.isDown = false;
+
 }
