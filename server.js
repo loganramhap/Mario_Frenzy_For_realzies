@@ -23,7 +23,7 @@ io.on('connection',function(socket){
         socket.player = {
             id: server.lastPlayderID++,
             x: 16,
-            y: Game.world.height - 40
+            y: 10
         };
         socket.emit('allplayers',getAllPlayers());
         socket.broadcast.emit('newplayer',socket.player);
