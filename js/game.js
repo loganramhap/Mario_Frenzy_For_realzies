@@ -28,7 +28,7 @@ function preload() {
 function spritesheetLoader(name, filepath, length, width){
   Game.load.spritesheet(name, filepath, length, width);
 }
-function nplayer(id, x ,y) {
+function nPlayer(id, x ,y) {
     Game.playerMap[id] = Game.add.sprite(x,y,'mario');
     //Game.playerMap[id].tint = 0xff00ff;
 }
