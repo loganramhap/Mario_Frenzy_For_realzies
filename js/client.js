@@ -1,3 +1,4 @@
+import game.js
 var Client = {};
 Client.socket = io.connect();
 
