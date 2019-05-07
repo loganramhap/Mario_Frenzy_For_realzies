@@ -1,4 +1,3 @@
-
 var Client = {};
 //var Logan = new game.qwertyuiop(10, 10, 10)
 Client.socket = io.connect();
@@ -33,4 +32,3 @@ Client.socket.on('allplayers',function(data){
         Game.removePlayer(id);
     });
 });
-  

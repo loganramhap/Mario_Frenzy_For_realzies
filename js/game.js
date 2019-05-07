@@ -28,7 +28,7 @@ function preload() {
 function spritesheetLoader(name, filepath, length, width){
   Game.load.spritesheet(name, filepath, length, width);
 }
- function addNewPlayer(id, x ,y) {
+function addNewPlayer(id, x ,y) {
     Game.playerMap[id] = Game.add.sprite(x,y,'mario');
     //Game.playerMap[id].tint = 0xff00ff;
 }
@@ -119,7 +119,7 @@ function goombaOverlap(player, goomba) {
 
 
 
- function movePlayer(id, x, y) {
+function movePlayer(id, x, y) {
   if (player.body.enable) {
     player.body.velocity.x = 0;
     if (cursors.left.isDown) {
