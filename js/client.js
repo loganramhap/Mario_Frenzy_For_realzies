@@ -1,6 +1,7 @@
 
 var Client = {};
-//var Logan = new game.qwertyuiop(10, 10, 10)
+
+
 Client.socket = io.connect();
 
 Client.sendTest = function(){
@@ -17,6 +18,7 @@ Client.sendClick = function(x,y){
 };
 
 Client.socket.on('newplayer',function(data){
+    var a = new Game;
     Game.addNewPlayer(data.id,data.x,data.y);
 });
 
@@ -33,4 +35,3 @@ Client.socket.on('allplayers',function(data){
         Game.removePlayer(id);
     });
 });
-  
