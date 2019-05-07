@@ -35,3 +35,4 @@ Client.socket.on('allplayers',function(data){
         Game.removePlayer(id);
     });
 });
+  
