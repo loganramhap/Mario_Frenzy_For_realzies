@@ -1,4 +1,16 @@
-var Game = {};
+var Game = new Phaser.Game(
+  256,
+  240,
+  Phaser.CANVAS,
+  "",
+  {
+    preload: preload,
+    create: create,
+    update: update
+  },
+  false,
+  false
+);
 
 //Game.state.add('Game', Game);
 //Game.state.start('Game');
