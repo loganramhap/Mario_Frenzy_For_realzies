@@ -1,6 +1,7 @@
+alert('Hello');
 var Client = {};
 //var Logan = new game.qwertyuiop(10, 10, 10)
-Client.socket = io.connect();
+Client.socket = io.connect("http://localhost:8080");
 
 Client.sendTest = function(){
     console.log("test sent");
